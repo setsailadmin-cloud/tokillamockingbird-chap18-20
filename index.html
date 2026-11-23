@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-stone-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetSail Novel Course: To Kill a Mockingbird (Chapters 18–20)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Newsreader', 'Playfair Display', 'Georgia', 'serif'],
+                        display: ['Cinzel', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fdf8f3',
+                            100: '#f9eee2',
+                            200: '#f2dcbf',
+                            500: '#c27803',
+                            600: '#9e5902',
+                            800: '#633503',
+                            900: '#381c00'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1ede8;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d4cac0;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #a89c90;
+        }
+    </style>
+</head>
+<body class="min-h-full flex flex-col text-stone-800 font-sans antialiased selection:bg-amber-200 selection:text-amber-900 bg-stone-100">
+
+    <!-- Top Sticky Header -->
+    <header class="bg-stone-900 text-stone-100 border-b border-stone-800 sticky top-0 z-40 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand & Course Title -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 text-stone-950 flex items-center justify-center font-extrabold text-lg font-display shadow-md shrink-0">
+                        SS
+                    </div>
+                    <div class="min-w-0">
+                        <span class="text-[11px] uppercase tracking-widest text-amber-400 font-semibold block truncate">SetSail Novel Course • To Kill a Mockingbird</span>
+                        <h1 class="text-sm sm:text-lg font-serif font-bold text-stone-100 flex items-center gap-2 truncate">
+                            <span class="truncate">Chapters 18–20: Testimonies, Truth & Closing Arguments</span>
+                        </h1>
+                    </div>
+                </div>
+
+                <!-- Novel Reference Quick Action -->
+                <div class="flex items-center space-x-2 shrink-0">
+                    <button onclick="openScreenshareModal()" class="px-3.5 py-1.5 rounded-lg text-xs font-medium bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 transition flex items-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-desktop"></i>
+                        <span class="hidden sm:inline">Screenshare Novel Helper</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main App Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-6">
+
+        <!-- Navigation Tabs Bar -->
+        <nav class="flex space-x-2 w-full overflow-x-auto p-1 bg-stone-200/80 rounded-2xl border border-stone-300/80 custom-scrollbar shadow-inner" aria-label="Tabs">
+            <button id="tab-nav-review" onclick="switchMainTab('review')" class="tab-nav-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 whitespace-nowrap bg-amber-600 text-white shadow-sm">
+                <i class="fa-solid fa-pen-clip"></i>
+                <span>Homework Review</span>
+                <span class="ml-1 text-[11px] bg-amber-700/80 px-2 py-0.5 rounded-full text-white font-mono">12 Sentences</span>
+            </button>
+            <button id="tab-nav-closereading" onclick="switchMainTab('closereading')" class="tab-nav-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 whitespace-nowrap text-stone-600 hover:text-stone-900 hover:bg-stone-300/60">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Close Reading</span>
+                <span class="ml-1 text-[11px] bg-stone-300 px-2 py-0.5 rounded-full text-stone-700 font-mono">10</span>
+            </button>
+            <button id="tab-nav-literary" onclick="switchMainTab('literary')" class="tab-nav-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 whitespace-nowrap text-stone-600 hover:text-stone-900 hover:bg-stone-300/60">
+                <i class="fa-solid fa-feather-pointed"></i>
+                <span>Literary Devices & Craft</span>
+            </button>
+            <button id="tab-nav-writing" onclick="switchMainTab('writing')" class="tab-nav-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 whitespace-nowrap text-stone-600 hover:text-stone-900 hover:bg-stone-300/60">
+                <i class="fa-solid fa-comments text-amber-700"></i>
+                <span>Prompt Discussion & Ideas</span>
+            </button>
+            <button id="tab-nav-preview" onclick="switchMainTab('preview')" class="tab-nav-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 whitespace-nowrap text-stone-600 hover:text-stone-900 hover:bg-stone-300/60">
+                <i class="fa-solid fa-compass"></i>
+                <span>Next Lesson Preview</span>
+                <span class="ml-1 text-[11px] bg-stone-300 px-2 py-0.5 rounded-full text-stone-700 font-mono">12</span>
+            </button>
+        </nav>
+
+        <!-- ==================== TAB 1: HOMEWORK REVIEW ==================== -->
+        <section id="tab-panel-review" class="tab-panel space-y-6">
+            <!-- Review Header Banner -->
+            <div class="bg-gradient-to-r from-stone-900 via-stone-800 to-amber-950 text-white p-6 rounded-2xl shadow-sm border border-stone-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-500/20 text-amber-300 border border-amber-500/30 mb-2">
+                        <i class="fa-solid fa-book-open mr-1.5"></i> Novel Context Mastery
+                    </span>
+                    <h2 class="text-2xl font-serif font-bold text-white">Chapters 18–20 Sentence Fill-in Challenge</h2>
+                    <p class="text-sm text-stone-300 mt-1 max-w-xl">
+                        Complete all 12 sentences from Chapters 18–20. Select the target vocabulary word from your homework list that best completes Harper Lee's original courtroom sentence.
+                    </p>
+                </div>
+                <!-- Interactive Score & Progress Widget -->
+                <div class="flex items-center gap-4 bg-stone-950/80 px-4 py-3 rounded-xl border border-stone-700/80 text-xs shadow-inner">
+                    <div>
+                        <span class="text-stone-400 block text-[10px] uppercase font-bold tracking-wider">Completed</span>
+                        <span id="fillin-progress-display" class="font-bold text-white text-base">0 / 12</span>
+                    </div>
+                    <div class="h-8 w-px bg-stone-700"></div>
+                    <div>
+                        <span class="text-stone-400 block text-[10px] uppercase font-bold tracking-wider">Score</span>
+                        <span id="fillin-score-display" class="font-bold text-amber-400 text-base">0 / 12</span>
+                    </div>
+                    <button onclick="resetSentenceChallenge()" class="ml-2 px-3 py-1.5 bg-amber-600 hover:bg-amber-500 text-white font-semibold text-xs rounded-lg transition flex items-center gap-1 shadow">
+                        <i class="fa-solid fa-rotate-right"></i> Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Scrollable 12 Question Cards Container -->
+            <div id="sentence-cards-container" class="space-y-6">
+                <!-- Dynamically generated all 12 cards on one page -->
+            </div>
+        </section>
+
+        <!-- ==================== TAB 2: CLOSE READING ==================== -->
+        <section id="tab-panel-closereading" class="tab-panel hidden space-y-6">
+            <!-- Header Banner -->
+            <div class="bg-gradient-to-r from-stone-900 via-stone-800 to-indigo-950 text-white p-6 rounded-2xl shadow-sm border border-stone-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 mb-2">
+                        <i class="fa-solid fa-graduation-cap mr-1.5"></i> Teaching Reference Alignment
+                    </span>
+                    <h2 class="text-2xl font-serif font-bold text-white">Chapters 18–20 Close Reading</h2>
+                    <p class="text-sm text-stone-300 mt-1 max-w-xl">
+                        10 high-impact discussion questions aligned with the teacher study guide covering Mayella Ewell's testimony, Tom Robinson's cross-examination, Dolphus Raymond's secret, and Atticus's closing argument.
+                    </p>
+                </div>
+                <!-- Action Toolbar -->
+                <div class="flex flex-wrap items-center gap-2">
+                    <button onclick="openScreenshareModal()" class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white transition flex items-center gap-2 shadow">
+                        <i class="fa-solid fa-display"></i>
+                        <span>Screenshare the novel if needed</span>
+                    </button>
+                    <!-- Chapter Filter -->
+                    <div class="bg-stone-950/80 p-1 rounded-xl border border-stone-700 flex items-center space-x-1">
+                        <button id="cr-filter-btn-all" onclick="filterCloseReading('all')" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-600 text-white transition">All (10)</button>
+                        <button id="cr-filter-btn-18" onclick="filterCloseReading(18)" class="px-3 py-1.5 text-xs font-semibold rounded-lg text-stone-300 hover:text-white hover:bg-stone-800 transition">Ch. 18 (3)</button>
+                        <button id="cr-filter-btn-19" onclick="filterCloseReading(19)" class="px-3 py-1.5 text-xs font-semibold rounded-lg text-stone-300 hover:text-white hover:bg-stone-800 transition">Ch. 19 (3)</button>
+                        <button id="cr-filter-btn-20" onclick="filterCloseReading(20)" class="px-3 py-1.5 text-xs font-semibold rounded-lg text-stone-300 hover:text-white hover:bg-stone-800 transition">Ch. 20 (4)</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Close Reading Cards List -->
+            <div id="close-reading-cards-list" class="space-y-6">
+                <!-- Dynamically rendered 10 Close Reading questions -->
+            </div>
+        </section>
+
+        <!-- ==================== TAB 3: LITERARY DEVICES & CRAFT ==================== -->
+        <section id="tab-panel-literary" class="tab-panel hidden space-y-6">
+            <div class="bg-gradient-to-r from-stone-900 via-indigo-950 to-stone-900 text-white p-6 rounded-2xl shadow-sm border border-stone-800">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-500/20 text-amber-300 border border-amber-500/30 mb-2">
+                    <i class="fa-solid fa-feather-pointed mr-1.5"></i> Literary Analysis & Craft
+                </span>
+                <h2 class="text-2xl font-serif font-bold text-white">Major Literary Methods in Chapters 18–20</h2>
+                <p class="text-sm text-stone-300 mt-1 max-w-2xl">
+                    Explore how Harper Lee constructs the climax of Tom Robinson's trial through dramatic and verbal irony, physical symbolism, foil characterization, classical rhetoric, and child witness focalization.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="literary-devices-grid">
+                <!-- Dynamically rendered literary devices -->
+            </div>
+        </section>
+
+        <!-- ==================== TAB 4: PROMPT DISCUSSION & IDEAS ==================== -->
+        <section id="tab-panel-writing" class="tab-panel hidden space-y-6">
+            <div class="bg-gradient-to-r from-amber-950 via-stone-900 to-stone-950 text-white p-6 rounded-2xl shadow-sm border border-stone-800">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-500/20 text-amber-300 border border-amber-500/30 mb-2">
+                    <i class="fa-solid fa-comments mr-1.5"></i> In-Class Discussion & Writing Prep
+                </span>
+                <h2 class="text-2xl font-serif font-bold text-white">Chapters 18–20 Prompt Discussion & Ideas</h2>
+                <p class="text-sm text-stone-300 mt-1 max-w-2xl">
+                    Students will not write the full essay during class. Use the 3 discussion angles below to analyze key themes, jot notes on the scratchpad, and prepare for the 150–300 word homework essay.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Left Column: Assignment Details & Notepad -->
+                <div class="lg:col-span-1 space-y-4">
+                    <!-- Assignment Card -->
+                    <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm space-y-3">
+                        <h3 class="font-serif font-bold text-stone-900 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-bullseye text-amber-600"></i>
+                            <span>Homework Writing Prompt</span>
+                        </h3>
+                        <p class="text-xs text-stone-700 leading-relaxed font-serif italic border-l-2 border-amber-500 pl-3 py-1 bg-amber-50/50 rounded-r-lg">
+                            "In Chapters 18–20, Harper Lee exposes the collision between undeniable physical truth and Maycomb's rigid racial code. Analyze how Lee uses <strong>either Tom Robinson's testimony and cross-examination</strong> or <strong>Atticus Finch's closing argument</strong> to challenge the town's conscience. (150–300 words)"
+                        </p>
+                    </div>
+
+                    <!-- Criteria Card -->
+                    <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm space-y-2">
+                        <h4 class="font-semibold text-stone-800 text-xs uppercase tracking-wider text-stone-500">Writing Criteria:</h4>
+                        <ul class="text-xs text-stone-600 space-y-1.5 list-disc pl-4 font-medium">
+                            <li><strong>Length:</strong> 150 to 300 words.</li>
+                            <li><strong>Focused Thesis:</strong> State clearly how Lee exposes Maycomb's moral hypocrisy or appeals to justice.</li>
+                            <li><strong>Textual Evidence:</strong> Integrate at least one specific detail or direct quote from Ch. 18–20.</li>
+                            <li><strong>Analytical Depth:</strong> Explain why the courtroom moment matters beyond plot summary.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Discussion Scratchpad -->
+                    <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-serif font-bold text-stone-900 text-xs uppercase tracking-wider text-stone-700 flex items-center gap-1.5">
+                                <i class="fa-solid fa-pen-to-square text-amber-600"></i> Class Discussion Notepad
+                            </h4>
+                            <span class="text-[10px] text-stone-400">Auto-saves locally</span>
+                        </div>
+                        <textarea id="discussion-scratchpad" oninput="saveScratchpad(this.value)" rows="6" placeholder="Jot down bullet points, key quotes, or classroom ideas for your homework essay..." class="w-full p-3 text-xs bg-stone-50 border border-stone-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-amber-500 focus:outline-none transition font-sans text-stone-800 leading-relaxed"></textarea>
+                        <div class="flex items-center justify-between text-[11px] text-stone-500">
+                            <span id="scratchpad-status"><i class="fa-solid fa-check text-emerald-600 mr-1"></i> Saved locally</span>
+                            <span id="scratchpad-count" class="font-semibold text-stone-700">0 words</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: 3 Guided Discussion Areas & Model Paragraph -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-5">
+                        <div class="border-b border-stone-100 pb-3 flex items-center justify-between">
+                            <h3 class="font-serif font-bold text-stone-900 text-base sm:text-lg flex items-center gap-2">
+                                <i class="fa-solid fa-comments text-amber-600"></i>
+                                <span>3 Key Thematic Angles for In-Class Discussion</span>
+                            </h3>
+                            <span class="text-xs bg-amber-100 text-amber-800 font-semibold px-2 py-0.5 rounded-full border border-amber-200">Discussion Guide</span>
+                        </div>
+
+                        <!-- Discussion Angle 1 -->
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-200">Angle 1</span>
+                                <span class="text-xs font-serif font-bold text-stone-700">Chapters 18 & 19</span>
+                            </div>
+                            <h4 class="font-serif font-bold text-stone-900 text-base">Courage vs. Conformity: Truth in an Unjust Courtroom</h4>
+                            <p class="text-xs text-stone-600 leading-relaxed">
+                                <strong>Core Insight:</strong> While Mayella Ewell conforms to her father's lie out of fear and shame, Tom Robinson and Link Deas display moral courage by speaking truthfully even when honesty violates Maycomb's racial expectations.
+                            </p>
+                            <div class="bg-white p-3 rounded-lg border border-stone-200 text-xs space-y-1">
+                                <span class="font-semibold text-amber-700 block text-[11px] uppercase tracking-wide"><i class="fa-solid fa-lightbulb mr-1"></i> Discussion Talking Points:</span>
+                                <ul class="list-disc pl-4 space-y-1 text-stone-600">
+                                    <li>How does Mayella's confusion over Atticus calling her "Miss" and "Ma'am" reveal the isolation and abuse of her home life?</li>
+                                    <li>Why was Tom Robinson trapped in an impossible dilemma inside the Ewell cabin—unable to strike a white woman yet appearing guilty by running?</li>
+                                    <li>What risk does Link Deas take by standing up in court to vouch for Tom's eight years of honest work?</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Discussion Angle 2 -->
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-200">Angle 2</span>
+                                <span class="text-xs font-serif font-bold text-stone-700">Chapters 19 & 20</span>
+                            </div>
+                            <h4 class="font-serif font-bold text-stone-900 text-base">The Unspoken Social Code & Why Pity Offends Maycomb</h4>
+                            <p class="text-xs text-stone-600 leading-relaxed">
+                                <strong>Core Insight:</strong> Tom Robinson seals his fate not because of any physical evidence, but because admitting he "felt sorry" for a white woman upends Maycomb's rigid racial hierarchy.
+                            </p>
+                            <div class="bg-white p-3 rounded-lg border border-stone-200 text-xs space-y-1">
+                                <span class="font-semibold text-amber-700 block text-[11px] uppercase tracking-wide"><i class="fa-solid fa-lightbulb mr-1"></i> Discussion Talking Points:</span>
+                                <ul class="list-disc pl-4 space-y-1 text-stone-600">
+                                    <li>Why does Mr. Gilmer immediately pounce on Tom's words: "You felt sorry for her, you felt sorry for her?"</li>
+                                    <li>How does Atticus explain Mayella's guilt—breaking a "time-honored code" by tempting a Black man and then trying to destroy "her daily reminder of what she did"?</li>
+                                    <li>What does Dolphus Raymond mean when he tells Scout that Dill cries "about the hell white people give colored folks, without even stopping to think that they're people, too"?</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Discussion Angle 3 -->
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-200">Angle 3</span>
+                                <span class="text-xs font-serif font-bold text-stone-700">Chapter 20</span>
+                            </div>
+                            <h4 class="font-serif font-bold text-stone-900 text-base">The Rhetoric of Justice: Atticus's Closing Argument</h4>
+                            <p class="text-xs text-stone-600 leading-relaxed">
+                                <strong>Core Insight:</strong> By shedding his formal coat and vest and invoking Thomas Jefferson's maxim "All men are created equal," Atticus challenges the twelve jurors to rise above prejudice and honor their civic duty.
+                            </p>
+                            <div class="bg-white p-3 rounded-lg border border-stone-200 text-xs space-y-1">
+                                <span class="font-semibold text-amber-700 block text-[11px] uppercase tracking-wide"><i class="fa-solid fa-lightbulb mr-1"></i> Discussion Talking Points:</span>
+                                <ul class="list-disc pl-4 space-y-1 text-stone-600">
+                                    <li>Why does Atticus unbutton his vest and remove his coat before addressing the jury as if "talking to folks on the post office corner"?</li>
+                                    <li>What double meaning lies behind Atticus's statement, "This case is as simple as black and white"?</li>
+                                    <li>Why does Atticus call American courts "the great levelers" while warning that "a court is only as sound as its jury"?</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Exemplar Model Response Toggle -->
+                        <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-stone-100">
+                            <span class="text-xs font-semibold text-stone-600">
+                                <i class="fa-solid fa-star text-amber-500 mr-1"></i> Need a model for homework writing?
+                            </span>
+                            <button onclick="toggleModelResponse()" id="model-toggle-btn" class="px-4 py-2 bg-stone-900 hover:bg-stone-800 text-amber-300 text-xs font-bold rounded-xl transition flex items-center gap-2 shadow">
+                                <i class="fa-solid fa-eye"></i>
+                                <span id="model-btn-label">Show High-Scoring Model Paragraph</span>
+                            </button>
+                        </div>
+
+                        <!-- Model Response Box -->
+                        <div id="model-response-box" class="hidden p-5 rounded-xl bg-stone-900 text-stone-200 text-xs leading-relaxed space-y-2 border border-stone-800">
+                            <div class="flex items-center justify-between border-b border-stone-800 pb-2">
+                                <span class="font-bold text-amber-400 uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+                                    <i class="fa-solid fa-certificate"></i> Exemplar Analytical Response (230 Words):
+                                </span>
+                                <span class="text-[10px] text-stone-400 font-mono">Theme: Rhetoric of Justice & Moral Courage (Ch. 20)</span>
+                            </div>
+                            <p class="font-serif italic text-stone-300 leading-relaxed text-sm">
+                                In Chapter 20 of <em>To Kill a Mockingbird</em>, Harper Lee uses Atticus Finch's closing argument to dismantle Maycomb's racial hypocrisy and place the burden of justice squarely on the individual consciences of the jurors. Before speaking, Atticus unbuttons his vest and removes his coat, shedding courtroom formality to address the twelve men "as if they were folks on the post office corner." Through this deliberate shift in ethos, Atticus appeals to them not as distant elites, but as ordinary neighbors capable of moral clarity. He systematically exposes the prosecution's reliance on the "cynical confidence" that the jury will automatically accept a white family's word over a Black man's, bluntly declaring that "this case is as simple as black and white." By invoking Thomas Jefferson's principle that "all men are created equal" and calling the courtroom "the great leveler" where a pauper stands equal to a Rockefeller, Atticus elevates Tom Robinson's trial into a test of American democratic ideals. Ultimately, Atticus's warning that "a court is only as sound as its jury" reveals Lee's central conviction: legal institutions cannot manufacture justice on their own unless ordinary citizens possess the courage to set aside ingrained prejudice.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TAB 5: NEXT LESSON PREVIEW ==================== -->
+        <section id="tab-panel-preview" class="tab-panel hidden space-y-6">
+            <div class="bg-gradient-to-r from-stone-900 via-indigo-950 to-stone-900 text-white p-6 rounded-2xl shadow-sm border border-stone-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 mb-2">
+                        <i class="fa-solid fa-rocket mr-1.5"></i> Sneak Peek
+                    </span>
+                    <h2 class="text-2xl font-serif font-bold text-white">Next Lesson Preview: Chapters 21–23 Vocabulary</h2>
+                    <p class="text-sm text-stone-300 mt-1 max-w-xl">
+                        Preview target vocabulary terms and practice context deduction ahead of the jury's long-awaited verdict, Jem's disillusionment, Bob Ewell's threat, and Atticus's reflections on justice.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Context Clues Warm-up Widget -->
+            <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-serif font-bold text-stone-900 text-lg flex items-center gap-2">
+                        <i class="fa-solid fa-brain text-amber-600"></i>
+                        <span>Context Clues Warm-Up Challenge</span>
+                    </h3>
+                    <span class="text-xs bg-amber-100 text-amber-800 font-semibold px-2.5 py-1 rounded-full border border-amber-200">Interactive</span>
+                </div>
+                <p class="text-xs text-stone-600">Read the novel excerpt below. Try to deduce the missing vocabulary word from Chapters 21–23 before revealing the answer!</p>
+                
+                <div id="preview-clues-box" class="bg-stone-50 p-5 rounded-xl border border-stone-200 space-y-3">
+                    <!-- Dynamic Context Clue challenge -->
+                </div>
+            </div>
+
+            <!-- Upcoming Words Cards Grid -->
+            <div>
+                <h3 class="font-serif font-bold text-stone-900 text-lg mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-book-bookmark text-indigo-600"></i>
+                    <span>Preview Word Cards (Chapters 21–23)</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="preview-cards-grid">
+                    <!-- Dynamically generated preview cards -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Screenshare Helper Modal -->
+    <div id="screenshare-modal" class="fixed inset-0 bg-stone-950/70 backdrop-blur-xs flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl border border-stone-200">
+            <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+                <div class="flex items-center gap-2">
+                    <div class="p-2 rounded-lg bg-amber-100 text-amber-800">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-stone-900 text-base">Teacher Screenshare Guide</h3>
+                </div>
+                <button onclick="closeScreenshareModal()" class="text-stone-400 hover:text-stone-600">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <p class="text-xs text-stone-600 leading-relaxed">
+                When discussing close reading questions in class, share your digital book or PDF reader and navigate to these key scene benchmarks:
+            </p>
+            <div class="bg-stone-50 p-3.5 rounded-xl border border-stone-200 text-xs space-y-2 font-mono">
+                <div class="flex justify-between items-center text-stone-800">
+                    <span class="font-semibold text-stone-900">Ch. 18 (Mayella's Testimony & "Miss/Ma'am"):</span>
+                    <span class="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-bold">~Pages 179–185</span>
+                </div>
+                <div class="flex justify-between items-center text-stone-800">
+                    <span class="font-semibold text-stone-900">Ch. 18 (Tom's Withered Left Arm Reveal):</span>
+                    <span class="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-bold">~Pages 185–189</span>
+                </div>
+                <div class="flex justify-between items-center text-stone-800">
+                    <span class="font-semibold text-stone-900">Ch. 19 (Tom's Testimony & Gilmer's Attack):</span>
+                    <span class="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-bold">~Pages 190–199</span>
+                </div>
+                <div class="flex justify-between items-center text-stone-800">
+                    <span class="font-semibold text-stone-900">Ch. 20 (Dolphus Raymond & Coca-Cola):</span>
+                    <span class="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-bold">~Pages 200–202</span>
+                </div>
+                <div class="flex justify-between items-center text-stone-800">
+                    <span class="font-semibold text-stone-900">Ch. 20 (Atticus's Closing Argument):</span>
+                    <span class="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-bold">~Pages 202–206</span>
+                </div>
+            </div>
+            <div class="flex justify-end pt-2">
+                <button onclick="closeScreenshareModal()" class="px-4 py-2 bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold rounded-xl">
+                    Got it, Back to Class
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-stone-900 text-white px-4 py-3 rounded-xl shadow-2xl border border-stone-700 text-xs font-medium flex items-center space-x-2 translate-y-20 opacity-0 transition-all duration-300 z-50">
+        <i id="toast-icon" class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toast-message">Action successful!</span>
+    </div>
+
+    <!-- JavaScript Data & Logic -->
+    <script>
+        // Exact 12 Words from Chapters 18–20 Vocabulary List
+        const HOMEWORK_VOCAB = [
+            {
+                id: "v1",
+                word: "neutrality",
+                pos: "noun",
+                def: "impartiality; the state of not taking sides",
+                sentence: "Mayella's hostility, which had subsided to grudging ________, flared again.",
+                chapter: "Chapter 18"
+            },
+            {
+                id: "v2",
+                word: "brash",
+                pos: "adjective",
+                def: "aggressive; bold in an unrefined way",
+                sentence: "Mayella's recital had given her confidence, but it was not her father's ________ kind: there was something stealthy about hers.",
+                chapter: "Chapter 18"
+            },
+            {
+                id: "v3",
+                word: "mollified",
+                pos: "adjective",
+                def: "soothed; calmed",
+                sentence: "________, Mayella gave Atticus a final terrified glance and answered his question.",
+                chapter: "Chapter 18"
+            },
+            {
+                id: "v4",
+                word: "browbeating",
+                pos: "verb (gerund)",
+                def: "bullying; intimidating with words",
+                sentence: "Mr. Gilmer interrupted with an objection: he was not irrelevant or immaterial, but Atticus was ________ the witness.",
+                chapter: "Chapter 18"
+            },
+            {
+                id: "v5",
+                word: "candid",
+                pos: "adjective",
+                def: "open; frank; honest",
+                sentence: "“You’re very ________ about this, why did you run so fast?”",
+                chapter: "Chapter 19"
+            },
+            {
+                id: "v6",
+                word: "impudent",
+                pos: "adjective",
+                def: "disrespectful; cocky",
+                sentence: "“Are you being ________ to me, boy?” “No suh, I didn’t go to be.”",
+                chapter: "Chapter 19"
+            },
+            {
+                id: "v7",
+                word: "volition",
+                pos: "noun",
+                def: "the exercising of one's own free will",
+                sentence: "He seemed to be a respectable Negro, and a respectable Negro would never go up into somebody’s yard of his own ________.",
+                chapter: "Chapter 19"
+            },
+            {
+                id: "v8",
+                word: "expunge",
+                pos: "verb",
+                def: "to erase or remove completely",
+                sentence: "Judge Taylor told the reporter to ________ anything he happened to have written down.",
+                chapter: "Chapter 19"
+            },
+            {
+                id: "v9",
+                word: "integrity",
+                pos: "noun",
+                def: "honesty and strong moral principles",
+                sentence: "“I’m no idealist to believe firmly in the ________ of our courts and in the jury system—that is no ideal to me, it is a living, working reality.”",
+                chapter: "Chapter 20"
+            },
+            {
+                id: "v10",
+                word: "cynical",
+                pos: "adjective",
+                def: "distrustful of others' sincerity or motives",
+                sentence: "The witnesses for the state have presented themselves to you gentlemen, to this court, in the ________ confidence that their testimony would not be doubted.",
+                chapter: "Chapter 20"
+            },
+            {
+                id: "v11",
+                word: "idealist",
+                pos: "noun",
+                def: "one who holds an unrealistically positive or perfect view of something",
+                sentence: "“I’m no ________ to believe firmly in the integrity of our courts and in the jury system—that is no ideal to me, it is a living, working reality.”",
+                chapter: "Chapter 20"
+            },
+            {
+                id: "v12",
+                word: "unmitigated",
+                pos: "adjective",
+                def: "absolute; not lessened in any way",
+                sentence: "A quiet, respectable, humble Negro who had the ________ temerity to ‘feel sorry’ for a white woman has had to put his word against two white people’s.",
+                chapter: "Chapter 20"
+            }
+        ];
+
+        // 10 Curated High-Impact Close Reading Questions from Chapters 18–20 Teacher Copy
+        const CLOSE_READING_QUESTIONS = [
+            {
+                id: 1,
+                chapter: 18,
+                title: "Mayella's Contradicting Testimony & Misunderstood Courtesy",
+                question: "How does Mayella's testimony contradict her father's account of what happened, and why does she believe Atticus is mocking her when he questions her?",
+                quote: "...next thing I knew Papa was in the room a'standing over me hollerin' who done it, who done it?",
+                citation: "Ch. 18 Reference (Q1–Q3)",
+                literaryDevice: "Dramatic & Verbal Irony",
+                insight: "Mayella testifies that after the assault, Bob Ewell burst into the room shouting 'who done it, who done it?'—directly contradicting Bob Ewell's Chapter 17 claim that he saw Tom Robinson through the window. Furthermore, Mayella is so unaccustomed to basic respect or politeness in her harsh, isolated home life that when Atticus addresses her courteously as 'Miss' and 'Ma'am,' she assumes he is making fun of her. Atticus asks numerous questions about her family and background to help the jury see her pathetic, lonely existence.",
+                userNote: ""
+            },
+            {
+                id: 2,
+                chapter: 18,
+                title: "Tom Robinson's Paralyzed Left Arm",
+                question: "Describe Tom Robinson's physical appearance when he stands up in court. What is unusual about his left arm, and how does this physical evidence dismantle the prosecution's case?",
+                quote: "His left arm was fully twelve inches shorter than his right, and hung dead at his side. It ended in a small shriveled hand, and from as far away as the balcony I could see that it was no use to him.",
+                citation: "Ch. 18 Reference (Q4)",
+                literaryDevice: "Physical Symbolism & Forensic Proof",
+                insight: "Tom Robinson's left arm was mangled in a cotton gin when he was a boy, leaving it twelve inches shorter than his right arm with a shriveled, completely useless hand. Because Sheriff Heck Tate testified that Mayella was beaten primarily on the right side of her face (requiring a left-handed assailant) and choked with both hands around her throat, Tom's crippled left arm proves it was physically impossible for him to have committed the assault—pointing squarely toward the left-handed Bob Ewell.",
+                userNote: ""
+            },
+            {
+                id: 3,
+                chapter: 18,
+                title: "Atticus's Final Question to Mayella",
+                question: "On what dramatic note does Atticus end his cross-examination of Mayella Ewell, and how does she react?",
+                quote: "'Who beat you up? Tom Robinson or your father?' ... Her face was a mixture of terror and fury.",
+                citation: "Ch. 18 Reference (Q5)",
+                literaryDevice: "Courtroom Climax & Psychological Tension",
+                insight: "Atticus confronts Mayella directly with the truth: 'Who beat you up? Tom Robinson or your father?' Frozen between terror of her abusive father and fury at being exposed in public, Mayella refuses to answer directly, erupts in one final angry outburst reiterating her accusation against Tom, and breaks down weeping.",
+                userNote: ""
+            },
+            {
+                id: 4,
+                chapter: 19,
+                title: "Tom Robinson's Testimony & His Impossible Dilemma",
+                question: "Summarize Tom Robinson's account of what happened inside the Ewell house. Why did Tom run away when Bob Ewell appeared at the window, and why was he trapped no matter what he did?",
+                quote: "...he would not have dared strike a white woman under any circumstances and expect to live long, so he took the first opportunity to run—a sure sign of guilt.",
+                citation: "Ch. 19 Reference (Q1–Q4)",
+                literaryDevice: "Situational Irony & Moral Entrapment",
+                insight: "After proving his left hand is useless by having to lift it onto the Bible with his right hand during his oath, Tom explains that Mayella had saved nickels to send the seven Ewell children to town for ice cream so she could be alone with him. When Tom stood on a chair to reach a box on the chifforobe, Mayella grabbed his legs, hugged him, and kissed him, blocking the door when he tried to leave. When Bob Ewell appeared shouting threats, Tom fled because as a Black man in 1930s Alabama, pushing or striking a white woman would mean immediate death—leaving him trapped between appearing guilty by running or risking his life by staying.",
+                userNote: ""
+            },
+            {
+                id: 5,
+                chapter: 19,
+                title: "Mr. Gilmer's Cross-Examination & Tom's Fatal Admission",
+                question: "How does prosecutor Mr. Gilmer treat Tom Robinson during cross-examination, and why does Tom's admission that he 'felt sorry' for Mayella outrage Gilmer and the white spectators?",
+                quote: "'You felt sorry for her, you felt sorry for her?'",
+                citation: "Ch. 19 Reference (Q5–Q7)",
+                literaryDevice: "Social Satire & Verbal Condescension",
+                insight: "Despite Link Deas standing up in court to vouch that Tom worked faithfully for eight years without 'a speck o' trouble,' Mr. Gilmer interrogates Tom sneeringly, repeatedly calling him 'boy' and ignoring physical evidence. When Tom truthfully explains that he helped Mayella with chores because he 'felt sorry for her'—since nobody else in her family ever helped her—Gilmer explodes. Under Maycomb's racist caste system, pity implies superiority; the idea that a Black man could feel sorry for a white woman violates the town's rigid racial hierarchy.",
+                userNote: ""
+            },
+            {
+                id: 6,
+                chapter: 19,
+                title: "Dill's Tears Outside the Courtroom",
+                question: "Why does Dill begin to cry uncontrollably during Mr. Gilmer's cross-examination of Tom Robinson?",
+                quote: "'The way that man called him 'boy' all the time an' sneered at him, an' looked around at the jury every time he answered... It ain't right... it just makes me sick.'",
+                citation: "Ch. 19 Reference (Q8)",
+                literaryDevice: "Child Witness Focalization",
+                insight: "Dill is physically sickened by the cruelty, condescension, and dehumanization in Mr. Gilmer's tone as he calls Tom 'boy' and sneers at him for the jury's approval. Unlike the hardened adults in the courtroom, Dill possesses uncorrupted moral instincts and immediately recognizes the injustice of watching one human being demean another.",
+                userNote: ""
+            },
+            {
+                id: 7,
+                chapter: 20,
+                title: "Dolphus Raymond's Coca-Cola Secret & Insights on Dill",
+                question: "Why does Dolphus Raymond drink Coca-Cola out of a brown paper bag and pretend it is whiskey? How does he explain Dill's crying, and what does he tell Scout she will see inside the courthouse?",
+                quote: "'Cry about the hell white people give colored folks, without even stopping to think that they're people, too.'",
+                citation: "Ch. 20 Reference (Q1–Q3)",
+                literaryDevice: "Foil Characterization & Social Masking",
+                insight: "Dolphus Raymond stages a deliberate fraud against himself—pretending to be a drunkard—so Maycomb's townspeople have an easy excuse ('he's in the clutches of whiskey') to explain why a wealthy white man chooses to live with a Black woman and their biracial children. He tells Scout that Dill still cries because age and social conditioning haven't dulled his natural empathy yet, and warns Scout that stepping back inside the courtroom will reveal the ugly, hidden racism beneath Maycomb's polite exterior.",
+                userNote: ""
+            },
+            {
+                id: 8,
+                chapter: 20,
+                title: "Atticus Sheds His Coat & Exposes Mayella's Guilt",
+                question: "What surprising physical action does Atticus take before delivering his closing argument, and according to Atticus, what actually motivated Mayella Ewell to accuse Tom Robinson?",
+                quote: "'She was white, and she tempted a Negro. She did something that in our society is unspeakable: she kissed a black man... No code mattered to her before she broke it, but it came crashing down on her afterwards.'",
+                citation: "Ch. 20 Reference (Q5 & Q7)",
+                literaryDevice: "Symbolic Gesture & Psychological Analysis",
+                insight: "Atticus unbuttons his vest, loosens his tie, and takes off his coat—something Scout and Jem have never seen him do in public—abandoning legal formality to speak to the jurors man-to-man 'as if they were folks on the post office corner.' Atticus argues that Mayella was motivated not by rape, but by intense guilt and shame after breaking Maycomb's taboo by kissing a Black man; terrified of her father and societal condemnation, she tried to destroy Tom Robinson as 'her daily reminder of what she did.'",
+                userNote: ""
+            },
+            {
+                id: 9,
+                chapter: 20,
+                title: "'As Simple as Black and White' & Challenging Racial Assumptions",
+                question: "What double meaning lies behind Atticus's statement, 'This case is as simple as black and white,' and how does his closing speech directly attack Maycomb's racist assumptions?",
+                quote: "'...that all Negroes lie, that all Negroes are basically immoral beings, that all Negro men are not to be trusted around our women...'",
+                citation: "Ch. 20 Reference (Q6 & Q8)",
+                literaryDevice: "Double Entendre & Rhetorical Refutation",
+                insight: "On the surface, 'as simple as black and white' means the physical evidence is clear-cut and unambiguous; on a deeper level, it exposes that the prosecution's entire case rests solely on skin color rather than facts. Atticus directly confronts the unspoken racist lie that all Black men are untrustworthy or immoral, reminding the jury that lying and human temptation exist across all races equally.",
+                userNote: ""
+            },
+            {
+                id: 10,
+                chapter: 20,
+                title: "'All Men Are Created Equal' & The Jury's Duty",
+                question: "According to Atticus, what is the one human institution where Thomas Jefferson's maxim 'All men are created equal' truly exists, and what warning does he leave with the jury?",
+                quote: "'...in this country our courts are the great levelers, and in our courts all men are created equal.' ... 'A court is only as sound as its jury, and a jury is only as sound as the men who make it up.'",
+                citation: "Ch. 20 Reference (Q9–Q10)",
+                literaryDevice: "Allusion & Civic Ethos",
+                insight: "Atticus identifies the American courtroom as 'the great leveler'—the one institution designed to make a pauper the equal of a Rockefeller and an ignorant person the equal of a college president. However, he concludes by reminding the jurors that justice is not automatic: a court is only as fair and honorable as the individual men on the jury who must set aside personal prejudice and judge strictly on the evidence.",
+                userNote: ""
+            }
+        ];
+
+        // 5 Literary Devices & Craft Cards for Chapters 18–20
+        const LITERARY_DEVICES = [
+            {
+                id: "ld1",
+                technique: "Dramatic & Verbal Irony",
+                icon: "fa-masks-theater",
+                title: "Irony in Mayella Ewell's Testimony",
+                description: "Harper Lee layers both dramatic and verbal irony throughout Chapter 18. The audience immediately spots the contradiction between Mayella's claim that Bob Ewell shouted 'who done it?' and Bob's earlier testimony, while Mayella's tragic isolation leads her to mistake Atticus's genuine courtesy ('Miss' and 'Ma'am') for cruel mockery.",
+                quote: "\"She thought he was trying to make fun of her... 'Long's you keep on makin' fun o'me.'\""
+            },
+            {
+                id: "ld2",
+                technique: "Physical Symbolism",
+                icon: "fa-hand",
+                title: "Tom Robinson's Withered Left Arm",
+                description: "Tom's crippled left arm—twelve inches shorter than his right and ending in a shriveled, useless hand—functions both as concrete forensic proof of his innocence and as a poignant symbol of his powerlessness within a rigged Southern legal system.",
+                quote: "\"His left arm was fully twelve inches shorter than his right, and hung dead at his side... it was no use to him.\""
+            },
+            {
+                id: "ld3",
+                technique: "Foil & Social Masking",
+                icon: "fa-bottle-droplet",
+                title: "Dolphus Raymond's Paper-Bag Facade",
+                description: "Serving as a foil to Atticus's open defiance, Dolphus Raymond wears the mask of a town drunkard—sipping Coca-Cola from a paper sack—so Maycomb's citizens can rationalize his rejection of racial segregation without questioning their own prejudices.",
+                quote: "\"I had never encountered a being who deliberately perpetrated fraud against himself.\""
+            },
+            {
+                id: "ld4",
+                technique: "Classical Rhetoric (Ethos, Pathos, Logos)",
+                icon: "fa-scale-balanced",
+                title: "Atticus's Closing Argument Architecture",
+                description: "Lee structures Atticus's speech as a masterclass in persuasion: he establishes humble ethos by removing his coat and vest, appeals to logos by dissecting the lack of medical evidence, and elevates pathos by invoking 'All men are created equal' to challenge the jury's conscience.",
+                quote: "\"In the name of God, do your duty. In the name of God, believe him.\""
+            },
+            {
+                id: "ld5",
+                technique: "Child Witness Focalization",
+                icon: "fa-eye",
+                title: "Dill's Tears as Moral Barometer",
+                description: "While adult spectators treat the trial as a spectacle, Lee filters the cruelty of Mr. Gilmer's cross-examination through Dill's visceral emotional reaction. Dill's nausea and tears serve as the novel's uncorrupted moral compass, exposing the ugliness that adults have normalized.",
+                quote: "\"The way that man called him 'boy' all the time an' sneered at him... Hasn't anybody got any business talkin' like that—it just makes me sick.\""
+            }
+        ];
+
+        // 12 Preview Words for Chapters 21–23 (from uploaded sheet)
+        const PREVIEW_VOCAB = [
+            {
+                word: "demurred",
+                pos: "verb",
+                def: "protested; objected mildly",
+                sentence: "“Jem,” Reverend Sykes demurred, “this ain’t a polite thing for little ladies to hear...”",
+                maskedSentence: "“Jem,” Reverend Sykes ________, “this ain’t a polite thing for little ladies to hear...”",
+                chapter: "Chapter 21"
+            },
+            {
+                word: "indignant",
+                pos: "adjective",
+                def: "angry, typically at something unjust",
+                sentence: "The streetlights were on, and we glimpsed Calpurnia's indignant profile as we passed beneath them.",
+                maskedSentence: "The streetlights were on, and we glimpsed Calpurnia's ________ profile as we passed beneath them.",
+                chapter: "Chapter 21"
+            },
+            {
+                word: "relenting",
+                pos: "verb (gerund)",
+                def: "giving in; softening one's position",
+                sentence: "“The jury might be out and back in a minute, we don’t know—” but we could tell Atticus was relenting.",
+                maskedSentence: "“The jury might be out and back in a minute, we don’t know—” but we could tell Atticus was ________.",
+                chapter: "Chapter 21"
+            },
+            {
+                word: "remorse",
+                pos: "noun",
+                def: "deep regret or guilt",
+                sentence: "Calpurnia revived a series of rusty threats that moved Jem to little remorse.",
+                maskedSentence: "Calpurnia revived a series of rusty threats that moved Jem to little ________.",
+                chapter: "Chapter 21"
+            },
+            {
+                word: "fatalistic",
+                pos: "adjective",
+                def: "believing events are predetermined and unavoidable",
+                sentence: "“Don’t you oh well me, sir,” Miss Maudie replied, recognizing Jem's fatalistic noises, “you are not old enough to appreciate what I said.”",
+                maskedSentence: "“Don’t you oh well me, sir,” Miss Maudie replied, recognizing Jem's ________ noises, “you are not old enough to appreciate what I said.”",
+                chapter: "Chapter 22"
+            },
+            {
+                word: "feral",
+                pos: "adjective",
+                def: "wild; savage",
+                sentence: "Jem made a feral noise in his throat.",
+                maskedSentence: "Jem made a ________ noise in his throat.",
+                chapter: "Chapter 22"
+            },
+            {
+                word: "ruefully",
+                pos: "adverb",
+                def: "in a sorrowful or regretful manner",
+                sentence: "“We’re so rarely called on to be Christians, but when we are, we’ve got men like Atticus to go for us.” Jem grinned ruefully.",
+                maskedSentence: "“We’re so rarely called on to be Christians, but when we are, we’ve got men like Atticus to go for us.” Jem grinned ________.",
+                chapter: "Chapter 22"
+            },
+            {
+                word: "adamant",
+                pos: "adjective",
+                def: "stubbornly firm; unwilling to change one's position",
+                sentence: "“We oughta do away with juries.” Jem was adamant.",
+                maskedSentence: "“We oughta do away with juries.” Jem was ________.",
+                chapter: "Chapter 23"
+            },
+            {
+                word: "credibility",
+                pos: "noun",
+                def: "the quality of being trustworthy or believable",
+                sentence: "“I destroyed his last shred of credibility at that trial, if he had any to begin with.”",
+                maskedSentence: "“I destroyed his last shred of ________ at that trial, if he had any to begin with.”",
+                chapter: "Chapter 23"
+            },
+            {
+                word: "furtive",
+                pos: "adjective",
+                def: "sneaky; secretive",
+                sentence: "“Nobody has much chance to be furtive in Maycomb,” Atticus answered.",
+                maskedSentence: "“Nobody has much chance to be ________ in Maycomb,” Atticus answered.",
+                chapter: "Chapter 23"
+            },
+            {
+                word: "sordid",
+                pos: "adjective",
+                def: "vile; morally distasteful",
+                sentence: "“I guess it’s to protect our frail ladies from sordid cases like Tom’s.”",
+                maskedSentence: "“I guess it’s to protect our frail ladies from ________ cases like Tom’s.”",
+                chapter: "Chapter 23"
+            },
+            {
+                word: "wryly",
+                pos: "adverb",
+                def: "in a dry, ironic, or sarcastic manner",
+                sentence: "“We’re scared for you, and we think you oughta do something about him.” Atticus smiled wryly.",
+                maskedSentence: "“We’re scared for you, and we think you oughta do something about him.” Atticus smiled ________.",
+                chapter: "Chapter 23"
+            }
+        ];
+
+        // State Tracking
+        let sentenceState = [];
+        let sentenceScore = 0;
+        let currentCrFilter = 'all';
+
+        // Initialize App
+        window.addEventListener('DOMContentLoaded', () => {
+            initSentenceState();
+            renderAllSentenceCards();
+            renderCloseReadingCards();
+            renderLiteraryDevices();
+            renderPreviewCards();
+            initPreviewChallenge();
+
+            // Load saved discussion scratchpad
+            const savedScratchpad = localStorage.getItem('tkam_scratchpad_notes_ch18_20');
+            if (savedScratchpad) {
+                const pad = document.getElementById('discussion-scratchpad');
+                if (pad) {
+                    pad.value = savedScratchpad;
+                    updateScratchpadCount(savedScratchpad);
+                }
+            }
+        });
+
+        // Tab Navigation
+        function switchMainTab(tabKey) {
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
+            document.querySelectorAll('.tab-nav-btn').forEach(b => {
+                b.classList.remove('bg-amber-600', 'text-white', 'shadow-sm');
+                b.classList.add('text-stone-600', 'hover:text-stone-900', 'hover:bg-stone-300/60');
+            });
+
+            const targetPanel = document.getElementById(`tab-panel-${tabKey}`);
+            const targetBtn = document.getElementById(`tab-nav-${tabKey}`);
+
+            if (targetPanel) targetPanel.classList.remove('hidden');
+            if (targetBtn) {
+                targetBtn.classList.add('bg-amber-600', 'text-white', 'shadow-sm');
+                targetBtn.classList.remove('text-stone-600', 'hover:text-stone-900', 'hover:bg-stone-300/60');
+            }
+        }
+
+        // ==================== SENTENCE CHALLENGE ENGINE ====================
+        function initSentenceState() {
+            sentenceState = HOMEWORK_VOCAB.map((item) => {
+                const distractors = HOMEWORK_VOCAB
+                    .filter(v => v.id !== item.id)
+                    .map(v => v.word)
+                    .sort(() => 0.5 - Math.random())
+                    .slice(0, 3);
+
+                const options = [
+                    { word: item.word, isCorrect: true },
+                    ...distractors.map(w => ({ word: w, isCorrect: false }))
+                ].sort(() => 0.5 - Math.random());
+
+                return {
+                    ...item,
+                    options: options,
+                    answered: false,
+                    selectedWord: null,
+                    isCorrect: false
+                };
+            });
+            sentenceScore = 0;
+            updateSentenceScores();
+        }
+
+        function resetSentenceChallenge() {
+            initSentenceState();
+            renderAllSentenceCards();
+            showToast("Sentence Challenge Reset!");
+        }
+
+        function renderAllSentenceCards() {
+            const container = document.getElementById('sentence-cards-container');
+            if (!container) return;
+
+            container.innerHTML = sentenceState.map((q, idx) => {
+                const maskedSentence = q.sentence.replace('________', '<span class="underline decoration-amber-500 decoration-2 font-mono font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">________</span>');
+
+                return `
+                    <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm space-y-4 hover:border-stone-300 transition" id="sent-card-${idx}">
+                        <!-- Top Metadata & Audio Pronunciation -->
+                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-stone-100 pb-3">
+                            <div class="flex items-center gap-2">
+                                <span class="px-2.5 py-1 rounded-full bg-stone-900 text-amber-300 text-xs font-bold font-mono">
+                                    Sentence ${idx + 1} of ${sentenceState.length}
+                                </span>
+                                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200">
+                                    ${q.chapter}
+                                </span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button onclick="speakWord('${q.word}')" title="Pronounce word" class="text-stone-400 hover:text-amber-600 text-xs flex items-center gap-1 px-2 py-1 rounded hover:bg-stone-50 transition">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                    <span class="hidden sm:inline font-sans text-[11px]">Audio</span>
+                                </button>
+                                <span class="text-xs text-stone-500 italic">
+                                    Clue: <strong class="text-stone-800 font-semibold">${q.def}</strong> (${q.pos})
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Novel Context Sentence -->
+                        <div class="bg-stone-50/70 p-4 rounded-xl border-l-4 border-amber-500 border-y border-r border-stone-200/60 shadow-xs">
+                            <p class="font-serif italic text-base sm:text-lg text-stone-900 leading-relaxed">
+                                "${maskedSentence}"
+                            </p>
+                        </div>
+
+                        <!-- 4 Choices Grid -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+                            ${q.options.map((opt) => `
+                                <button id="opt-btn-${idx}-${opt.word}" 
+                                        onclick="selectSentenceOption(${idx}, '${opt.word}', ${opt.isCorrect})"
+                                        ${q.answered ? 'disabled' : ''}
+                                        class="sent-btn-${idx} px-3.5 py-3 rounded-xl border border-stone-200 bg-white hover:bg-stone-50 font-serif font-bold text-xs sm:text-sm text-stone-800 transition shadow-xs text-center ${q.answered ? 'cursor-default' : ''}">
+                                    ${opt.word}
+                                </button>
+                            `).join('')}
+                        </div>
+
+                        <!-- Feedback Box -->
+                        <div id="sent-feedback-${idx}" class="${q.answered ? '' : 'hidden'} text-xs font-medium p-3 rounded-xl transition-all">
+                            ${q.answered ? (
+                                q.isCorrect 
+                                    ? `<div class="p-3 bg-emerald-50 text-emerald-900 border border-emerald-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600"></i> Correct! <strong>${q.word}</strong> (${q.pos}) means "${q.def}".</div>`
+                                    : `<div class="p-3 bg-rose-50 text-rose-900 border border-rose-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-rose-600"></i> Incorrect. The correct word is <strong>${q.word}</strong>: "${q.def}".</div>`
+                            ) : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function selectSentenceOption(qIdx, chosenWord, isCorrect) {
+            const q = sentenceState[qIdx];
+            if (!q || q.answered) return;
+
+            q.answered = true;
+            q.selectedWord = chosenWord;
+            q.isCorrect = isCorrect;
+
+            if (isCorrect) {
+                sentenceScore++;
+                showToast(`Sentence ${qIdx + 1}: Correct!`);
+            } else {
+                showToast(`Sentence ${qIdx + 1}: Incorrect`, true);
+            }
+
+            // Disable buttons for this question
+            const allBtns = document.querySelectorAll(`.sent-btn-${qIdx}`);
+            allBtns.forEach(btn => {
+                btn.disabled = true;
+                btn.classList.add('cursor-default');
+            });
+
+            const clickedBtn = document.getElementById(`opt-btn-${qIdx}-${chosenWord}`);
+            if (clickedBtn) {
+                if (isCorrect) {
+                    clickedBtn.classList.remove('bg-white', 'border-stone-200');
+                    clickedBtn.classList.add('bg-emerald-50', 'border-emerald-500', 'text-emerald-900', 'ring-2', 'ring-emerald-400');
+                } else {
+                    clickedBtn.classList.remove('bg-white', 'border-stone-200');
+                    clickedBtn.classList.add('bg-rose-50', 'border-rose-400', 'text-rose-900');
+                }
+            }
+
+            // Highlight the correct option if the user chose incorrectly
+            if (!isCorrect) {
+                const correctBtn = document.getElementById(`opt-btn-${qIdx}-${q.word}`);
+                if (correctBtn) {
+                    correctBtn.classList.add('bg-emerald-50', 'border-emerald-500', 'text-emerald-900');
+                }
+            }
+
+            // Render feedback
+            const fb = document.getElementById(`sent-feedback-${qIdx}`);
+            if (fb) {
+                fb.classList.remove('hidden');
+                fb.innerHTML = isCorrect 
+                    ? `<div class="p-3 bg-emerald-50 text-emerald-900 border border-emerald-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600"></i> Correct! <strong>${q.word}</strong> (${q.pos}) means "${q.def}".</div>`
+                    : `<div class="p-3 bg-rose-50 text-rose-900 border border-rose-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-rose-600"></i> Incorrect. The correct word is <strong>${q.word}</strong>: "${q.def}".</div>`;
+            }
+
+            updateSentenceScores();
+        }
+
+        function updateSentenceScores() {
+            const answeredCount = sentenceState.filter(q => q.answered).length;
+            const progressDisplay = document.getElementById('fillin-progress-display');
+            const scoreDisplay = document.getElementById('fillin-score-display');
+
+            if (progressDisplay) progressDisplay.textContent = `${answeredCount} / ${sentenceState.length}`;
+            if (scoreDisplay) scoreDisplay.textContent = `${sentenceScore} / ${sentenceState.length}`;
+        }
+
+        function speakWord(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const u = new SpeechSynthesisUtterance(text);
+                u.rate = 0.85;
+                window.speechSynthesis.speak(u);
+            }
+        }
+
+        // ==================== CLOSE READING ====================
+        function filterCloseReading(filter) {
+            currentCrFilter = filter;
+            ['all', 18, 19, 20].forEach(k => {
+                const btn = document.getElementById(`cr-filter-btn-${k}`);
+                if (btn) {
+                    btn.className = (k === filter)
+                        ? "px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-600 text-white transition"
+                        : "px-3 py-1.5 text-xs font-semibold rounded-lg text-stone-300 hover:text-white hover:bg-stone-800 transition";
+                }
+            });
+            renderCloseReadingCards();
+        }
+
+        function renderCloseReadingCards() {
+            const container = document.getElementById('close-reading-cards-list');
+            if (!container) return;
+
+            const filtered = currentCrFilter === 'all'
+                ? CLOSE_READING_QUESTIONS
+                : CLOSE_READING_QUESTIONS.filter(q => q.chapter === currentCrFilter);
+
+            container.innerHTML = filtered.map(q => {
+                const savedNote = localStorage.getItem(`tkam_cr_note_ch18_20_${q.id}`) || q.userNote;
+
+                return `
+                    <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm space-y-4 hover:shadow-md transition">
+                        <!-- Top Metadata -->
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-stone-100 pb-3">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-stone-900 text-amber-300 font-mono">
+                                    Chapter ${q.chapter}
+                                </span>
+                                <span class="text-xs px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 font-semibold border border-amber-200">
+                                    ${q.literaryDevice}
+                                </span>
+                                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-stone-100 text-stone-700 border border-stone-200 flex items-center gap-1">
+                                    <i class="fa-solid fa-bookmark text-amber-700 text-[10px]"></i> ${q.citation}
+                                </span>
+                            </div>
+                            <h4 class="font-serif font-bold text-stone-800 text-sm sm:text-base">${q.title}</h4>
+                        </div>
+
+                        <!-- Question & Novel Quote -->
+                        <div>
+                            <p class="font-serif font-bold text-stone-900 text-base sm:text-lg leading-snug">${q.question}</p>
+                            ${q.quote ? `
+                                <div class="mt-3 p-3.5 rounded-xl bg-amber-50/50 border-l-4 border-amber-500 text-xs sm:text-sm font-serif italic text-stone-700">
+                                    "${q.quote}"
+                                </div>
+                            ` : ''}
+                        </div>
+
+                        <!-- Auto-saving Note area -->
+                        <div class="space-y-1.5 pt-1">
+                            <div class="flex justify-between items-center text-xs text-stone-600 font-medium">
+                                <span><i class="fa-solid fa-pen-nib text-amber-600 mr-1"></i> Student Analysis Notes:</span>
+                                <span class="text-[10px] text-stone-400">Auto-saves locally</span>
+                            </div>
+                            <textarea oninput="saveCrNote(${q.id}, this.value)" class="w-full p-3 text-xs bg-stone-50 border border-stone-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-amber-500 focus:outline-none transition font-sans text-stone-800" rows="3" placeholder="Jot classroom discussion findings, textual citations, or observations here...">${savedNote || ''}</textarea>
+                        </div>
+
+                        <!-- Instructor Revealable Key Insight -->
+                        <div class="pt-2 border-t border-stone-100 flex flex-col gap-2">
+                            <button onclick="toggleCrInsight(${q.id})" class="text-xs font-semibold text-amber-800 hover:text-amber-900 flex items-center gap-1.5 self-start transition">
+                                <i class="fa-solid fa-key text-amber-600"></i>
+                                <span id="cr-insight-btn-label-${q.id}">Show Teacher Key Insights & Reference Answer</span>
+                                <i id="cr-insight-icon-${q.id}" class="fa-solid fa-chevron-down text-[10px]"></i>
+                            </button>
+
+                            <div id="cr-insight-box-${q.id}" class="hidden p-4 rounded-xl bg-stone-900 text-stone-200 text-xs leading-relaxed space-y-1 mt-1 border border-stone-800">
+                                <span class="font-bold text-amber-400 block uppercase tracking-wider text-[10px]">Teaching Unit Solution:</span>
+                                <p class="text-stone-300 font-sans leading-normal">${q.insight}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function saveCrNote(id, val) {
+            localStorage.setItem(`tkam_cr_note_ch18_20_${id}`, val);
+        }
+
+        function toggleCrInsight(id) {
+            const box = document.getElementById(`cr-insight-box-${id}`);
+            const label = document.getElementById(`cr-insight-btn-label-${id}`);
+            const icon = document.getElementById(`cr-insight-icon-${id}`);
+
+            if (box.classList.contains('hidden')) {
+                box.classList.remove('hidden');
+                label.textContent = "Hide Teacher Insights";
+                icon.className = "fa-solid fa-chevron-up text-[10px]";
+            } else {
+                box.classList.add('hidden');
+                label.textContent = "Show Teacher Key Insights & Reference Answer";
+                icon.className = "fa-solid fa-chevron-down text-[10px]";
+            }
+        }
+
+        // ==================== LITERARY DEVICES & CRAFT ====================
+        function renderLiteraryDevices() {
+            const container = document.getElementById('literary-devices-grid');
+            if (!container) return;
+
+            container.innerHTML = LITERARY_DEVICES.map(m => `
+                <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm space-y-4 hover:shadow-md transition flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center border border-indigo-100">
+                                <i class="fa-solid ${m.icon} text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-bold text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-amber-200 font-mono">${m.technique}</span>
+                                <h3 class="font-serif font-bold text-stone-900 text-base mt-1">${m.title}</h3>
+                            </div>
+                        </div>
+                        <p class="text-xs text-stone-600 leading-relaxed font-sans">${m.description}</p>
+                    </div>
+                    <div class="p-3 bg-stone-50 rounded-xl border-l-4 border-indigo-500 text-xs font-serif italic text-stone-700 mt-2">
+                        ${m.quote}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ==================== WRITING PROMPT & SCRATCHPAD ====================
+        function saveScratchpad(val) {
+            localStorage.setItem('tkam_scratchpad_notes_ch18_20', val);
+            updateScratchpadCount(val);
+        }
+
+        function updateScratchpadCount(val) {
+            const words = val.trim().split(/\s+/).filter(w => w.length > 0);
+            const countEl = document.getElementById('scratchpad-count');
+            if (countEl) countEl.textContent = `${words.length} words`;
+        }
+
+        function toggleModelResponse() {
+            const box = document.getElementById('model-response-box');
+            const label = document.getElementById('model-btn-label');
+            if (box.classList.contains('hidden')) {
+                box.classList.remove('hidden');
+                label.textContent = "Hide Model Response";
+            } else {
+                box.classList.add('hidden');
+                label.textContent = "Show High-Scoring Model Paragraph";
+            }
+        }
+
+        // ==================== PREVIEW TAB ====================
+        function renderPreviewCards() {
+            const grid = document.getElementById('preview-cards-grid');
+            if (!grid) return;
+
+            grid.innerHTML = PREVIEW_VOCAB.map(item => `
+                <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition space-y-3 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-2">
+                            <div class="flex items-center gap-2">
+                                <h4 class="font-serif font-bold text-stone-900 text-base">${item.word}</h4>
+                                <button onclick="speakWord('${item.word}')" title="Pronounce ${item.word}" class="text-stone-400 hover:text-indigo-600 transition p-1 rounded hover:bg-indigo-50">
+                                    <i class="fa-solid fa-volume-high text-xs"></i>
+                                </button>
+                            </div>
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-100 whitespace-nowrap">${item.pos}</span>
+                        </div>
+                        <p class="text-xs text-stone-700 mt-2 font-medium leading-relaxed">${item.def}</p>
+                    </div>
+                    <div class="bg-indigo-50/50 p-2.5 rounded-xl border border-indigo-100/60 mt-2">
+                        <span class="text-[10px] font-bold text-indigo-700 uppercase tracking-wider block mb-0.5">${item.chapter} Context:</span>
+                        <p class="text-xs font-serif italic text-stone-600">"${item.sentence}"</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        let previewClueIdx = 0;
+        function initPreviewChallenge() {
+            renderPreviewClue();
+        }
+
+        function renderPreviewClue() {
+            const box = document.getElementById('preview-clues-box');
+            if (!box) return;
+
+            const target = PREVIEW_VOCAB[previewClueIdx];
+            if (!target) return;
+
+            const promptSentence = target.maskedSentence || target.sentence;
+
+            box.innerHTML = `
+                <div class="flex items-center justify-between border-b border-stone-200 pb-2">
+                    <span class="text-xs font-bold text-stone-600">Challenge ${previewClueIdx + 1} of ${PREVIEW_VOCAB.length} (${target.chapter})</span>
+                    <button onclick="nextPreviewClue()" class="text-xs text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-1">
+                        <span>Next Excerpt</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <p class="font-serif text-stone-900 italic text-sm sm:text-base leading-relaxed py-1">
+                    "${promptSentence.replace('________', '<span class="font-mono font-bold text-indigo-600 underline">________</span>')}"
+                </p>
+                <div id="clue-reveal-box" class="hidden bg-stone-900 text-stone-100 p-3.5 rounded-xl text-xs space-y-1">
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-amber-400 uppercase text-[10px] block">Target Word: ${target.word} (${target.pos})</span>
+                        <button onclick="speakWord('${target.word}')" class="text-amber-300 hover:text-amber-200 text-xs flex items-center gap-1">
+                            <i class="fa-solid fa-volume-high"></i> Listen
+                        </button>
+                    </div>
+                    <p class="text-stone-300"><strong>Definition:</strong> ${target.def}</p>
+                </div>
+                <button onclick="toggleClueReveal()" id="clue-reveal-btn" class="px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs rounded-lg transition">
+                    Reveal Missing Word
+                </button>
+            `;
+        }
+
+        function toggleClueReveal() {
+            const box = document.getElementById('clue-reveal-box');
+            const btn = document.getElementById('clue-reveal-btn');
+            if (box.classList.contains('hidden')) {
+                box.classList.remove('hidden');
+                btn.textContent = "Hide Answer";
+            } else {
+                box.classList.add('hidden');
+                btn.textContent = "Reveal Missing Word";
+            }
+        }
+
+        function nextPreviewClue() {
+            previewClueIdx = (previewClueIdx + 1) % PREVIEW_VOCAB.length;
+            renderPreviewClue();
+        }
+
+        // Screenshare Modal
+        function openScreenshareModal() {
+            const modal = document.getElementById('screenshare-modal');
+            if (modal) modal.classList.remove('hidden');
+        }
+
+        function closeScreenshareModal() {
+            const modal = document.getElementById('screenshare-modal');
+            if (modal) modal.classList.add('hidden');
+        }
+
+        // Toast Helper
+        function showToast(msg, isError = false) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            const toastIcon = document.getElementById('toast-icon');
+
+            if (!toast || !toastMsg || !toastIcon) return;
+
+            toastMsg.textContent = msg;
+            toastIcon.className = isError 
+                ? "fa-solid fa-circle-exclamation text-rose-400" 
+                : "fa-solid fa-circle-check text-emerald-400";
+
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2600);
+        }
+    </script>
+</body>
+</html>
